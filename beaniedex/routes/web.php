@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('beanies', BeanieController::class)
-    ->only(['index', 'store'])
-    ->middleware(['auth', 'verified']);
+    ->only(['index', 'store']);
+    //->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
