@@ -15,7 +15,7 @@ class BeanieController extends Controller
     public function index(): Response
     {
         return Inertia::render('Beanies/Index', [
-
+            'beanies' => Beanie::all()
         ]);
     }
 
