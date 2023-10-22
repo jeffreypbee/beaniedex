@@ -1,3 +1,5 @@
+<x-layout>
+
 <h2>
     {{ $beanie->name }}
 </h2>
@@ -7,3 +9,4 @@
     {!! nl2br(e($beanie->poem)); !!}
 </p>
 
+</x-layout>

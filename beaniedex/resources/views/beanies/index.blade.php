@@ -1,5 +1,7 @@
-@foreach ($beanies as $beanie)
-    <div>
-        <a href="/beanies/{{$beanie->id}}">{{ $beanie->name }}</a>
-    </div>
-@endforeach
+<x-layout>
+
+<h2>Beanies</h2>
+
+<x-beanie-card-container :beanies="$beanies" />
+
+</x-layout>
