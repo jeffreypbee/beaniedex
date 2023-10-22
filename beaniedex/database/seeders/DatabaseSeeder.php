@@ -22,5 +22,8 @@ class DatabaseSeeder extends Seeder
 
         $beanieSeeder = new BeanieSeeder();
         $beanieSeeder->run();
+
+        $productLineSeeder = new ProductLineSeeder();
+        $productLineSeeder->run();
     }
 }
