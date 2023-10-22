@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeanieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/beanies', [BeanieController::class, 'index']);
+
+Route::get('/beanies/{beanie}', [BeanieController::class, 'show']);
