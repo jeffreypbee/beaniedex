@@ -26,4 +26,15 @@ class ProductLineController extends Controller
     public function create() {
         return view('productlines.create');
     }
+
+    // Store ProductLine data
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'name' => 'required'
+        ]);
+
+        ProductLine::create($formFields);
+
+        return redirect('/productlines')->with('message', 'Product Line created successfully!');
+    }
 }

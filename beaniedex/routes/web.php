@@ -29,3 +29,5 @@ Route::get('/productlines/create', [ProductLineController::class, 'create']);
 
 Route::get('/productlines/{productLine}', [ProductLineController::class, 'show']);
 
+Route::post('/productlines', [ProductLineController::class, 'store']);
+

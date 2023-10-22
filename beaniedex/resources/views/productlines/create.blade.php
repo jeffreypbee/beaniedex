@@ -5,14 +5,14 @@
 <form action="/productlines" method="POST">
     @csrf
 
-    <label for="productline-name">Product Line Name</label>
-    <input type="text" name="productline-name" value="{{old('name')}}">
+    <label for="name">Product Line Name</label>
+    <input type="text" name="name" value="{{old('name')}}">
     @error('name')
         <p>{{$message}}</p>
     @enderror
 
-    <label for="productline-desc">Product Line Name</label>
-    <textarea name="productline-desc">{{old('description')}}</textarea>
+    <label for="description">Product Line Name</label>
+    <textarea name="description">{{old('description')}}</textarea>
     @error('description')
         <p>{{$message}}</p>
     @enderror

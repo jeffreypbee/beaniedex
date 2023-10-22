@@ -10,6 +10,8 @@ class ProductLine extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description'];
+
     public function beanies(): HasMany
     {
         return $this->hasMany(Beanie::class);
