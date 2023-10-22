@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('/beanies', [BeanieController::class, 'index']);
 
+Route::get('/beanies/create', [BeanieController::class, 'create']);
+
 Route::get('/beanies/{beanie}', [BeanieController::class, 'show']);
 
 Route::get('/productlines', [ProductLineController::class, 'index']);

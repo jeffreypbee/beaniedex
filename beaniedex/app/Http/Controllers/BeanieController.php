@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beanie;
+use App\Models\ProductLine;
 use Illuminate\Http\Request;
 
 class BeanieController extends Controller
@@ -18,6 +19,13 @@ class BeanieController extends Controller
     public function show(Beanie $beanie) {
         return view('beanies.show', [
             'beanie' => $beanie
+        ]);
+    }
+
+    // Show creation form
+    public function create() {
+        return view('beanies.create', [
+            'productLines' => ProductLine::all()
         ]);
     }
 }

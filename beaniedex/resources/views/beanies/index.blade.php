@@ -4,4 +4,6 @@
 
 <x-beanie-card-container :beanies="$beanies" />
 
+<a href="/beanies/create">Add New Beanie</a>
+
 </x-layout>
