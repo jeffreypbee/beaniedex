@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BeanieController;
+use App\Http\Controllers\ProductLineController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,5 @@ Route::get('/', function () {
 Route::get('/beanies', [BeanieController::class, 'index']);
 
 Route::get('/beanies/{beanie}', [BeanieController::class, 'show']);
+
+Route::get('/productlines/{productLine}', [ProductLineController::class, 'show']);

@@ -14,19 +14,19 @@ class ProductLineSeeder extends Seeder
     public function run(): void
     {
         ProductLine::factory()->create([
-            'name' => 'Beanie Babies'
+            'name' => 'Beanie Baby'
         ]);
 
         ProductLine::factory()->create([
-            'name' => 'Beanie Buddies'
+            'name' => 'Beanie Buddy'
         ]);
 
         ProductLine::factory()->create([
-            'name' => 'Beanie Boos'
+            'name' => 'Beanie Boo'
         ]);
 
         ProductLine::factory()->create([
-            'name' => 'Teenie Beanies'
+            'name' => 'Teenie Beanie'
         ]);
     }
 }

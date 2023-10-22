@@ -15,6 +15,7 @@ class BeanieSeeder extends Seeder
     {
         Beanie::factory()->create([
             'name' => 'Peace',
+            'product_line_id' => 1,
             'species' => 'bear',
             'birthday' => '1996-02-01',
             'poem' => "All races, all colors, under th sun\n
@@ -25,6 +26,7 @@ class BeanieSeeder extends Seeder
 
         Beanie::factory()->create([
             'name' => 'Curly',
+            'product_line_id' => 1,
             'species' => 'bear',
             'birthday' => '1996-04-12',
             'poem' => "A bear so cute with hair that's curly\n
@@ -35,6 +37,7 @@ class BeanieSeeder extends Seeder
 
         Beanie::factory()->create([
             'name' => 'Strut',
+            'product_line_id' => 1,
             'species' => 'rooster',
             'birthday' => '1996-03-08',
             'poem' => "Listen closely to \"cock-a-doodle-doo\"\n
@@ -45,6 +48,7 @@ class BeanieSeeder extends Seeder
 
         Beanie::factory()->create([
             'name' => 'Mystic',
+            'product_line_id' => 1,
             'species' => 'unicorn',
             'birthday' => '1994-05-21',
             'poem' => "Once upon a time so far away\n
@@ -55,6 +59,7 @@ class BeanieSeeder extends Seeder
 
         Beanie::factory()->create([
             'name' => 'Sly',
+            'product_line_id' => 1,
             'species' => 'fox',
             'birthday' => '1996-09-12',
             'poem' => "Sly is a fox and tricky is he\n

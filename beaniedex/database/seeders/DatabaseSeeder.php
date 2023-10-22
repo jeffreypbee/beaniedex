@@ -20,10 +20,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        $productLineSeeder = new ProductLineSeeder();
+        $productLineSeeder->run();
+        
         $beanieSeeder = new BeanieSeeder();
         $beanieSeeder->run();
 
-        $productLineSeeder = new ProductLineSeeder();
-        $productLineSeeder->run();
     }
 }
