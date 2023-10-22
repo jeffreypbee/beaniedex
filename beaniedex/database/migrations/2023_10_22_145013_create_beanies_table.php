@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('retired_date')->nullable();
             $table->longtext('poem')->nullable();
             $table->longtext('notes')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

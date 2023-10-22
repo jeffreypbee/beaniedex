@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
@@ -49,11 +53,26 @@ footer {
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
 .card {
-    border: 1px solid gray;
+    border-radius: 20px;
+    
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    border: 2px solid white;
+    box-shadow: 2px 5px 5px #3335;
+}
+
+.beanie-card img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .create-form {
@@ -66,4 +85,45 @@ footer {
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
+}
+
+.show-beanie {
+    height: 100%;
+    width: 100%;
+}
+
+.show-beanie h2 {
+    margin: 0;
+}
+
+.show-beanie img {
+    max-width: 200px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px #3335;
+}
+
+.blur-bg {
+    background: #fff5;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.poem {
+    padding: 10px;
+    font-style: italic;
+    line-height: .8rem;
 }
