@@ -25,4 +25,7 @@ Route::get('/beanies/{beanie}', [BeanieController::class, 'show']);
 
 Route::get('/productlines', [ProductLineController::class, 'index']);
 
+Route::get('/productlines/create', [ProductLineController::class, 'create']);
+
 Route::get('/productlines/{productLine}', [ProductLineController::class, 'show']);
+

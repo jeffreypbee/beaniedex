@@ -8,4 +8,6 @@
     </div>
 @endforeach
 
+<a href="/productlines/create">Add New Product Line</a>
+
 </x-layout>

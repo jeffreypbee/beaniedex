@@ -21,4 +21,9 @@ class ProductLineController extends Controller
             'productLine' => $productLine
         ]);
     }
+
+    // Show creation form
+    public function create() {
+        return view('productlines.create');
+    }
 }
