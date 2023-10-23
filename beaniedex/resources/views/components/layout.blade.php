@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <h1>BeanieDex</h1>
+            <h1><a href="/">BeanieDex</a></h1>
             <nav>
                 <a href="/beanies">Beanies</a> | 
                 <a href="/productlines">Product Lines</a>
