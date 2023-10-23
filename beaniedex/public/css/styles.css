@@ -59,20 +59,27 @@ footer {
 
 .card {
     border-radius: 20px;
-    
+    background-color: white;
     border: 2px solid transparent;
 }
 
 .card:hover {
     border: 2px solid white;
-    box-shadow: 2px 5px 5px #3335;
+    box-shadow: 2px 5px 0px #3355;
 }
 
 .beanie-card img {
-    width: 150px;
     height: 180px;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.beanie-card {
+    transition: transform .5s;
+}
+
+.beanie-card:hover {
+    transform: rotate(-10deg);
 }
 
 .create-form {
