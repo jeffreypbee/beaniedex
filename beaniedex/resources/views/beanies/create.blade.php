@@ -22,13 +22,13 @@
     </div>
     
     <div>
-        <label for="product-line-id">Product Line</label>
-        <select name="product-line-id">
+        <label for="product_line_id">Product Line</label>
+        <select name="product_line_id">
             @foreach ($productLines as $productLine)
                 <option value="{{$productLine->id}}">{{ $productLine->name }}</option>
             @endforeach
         </select>
-        @error('product-line-id')
+        @error('product_line_id')
             {{ $message }}
         @enderror
     </div>
@@ -42,17 +42,17 @@
     </div>
     
     <div>
-        <label for="release-date">Release Date</label>
-        <input type="date" name="release-date" value="{{old('release-date')}}">
-        @error('release-date')
+        <label for="release_date">Release Date</label>
+        <input type="date" name="release_date" value="{{old('release_date')}}">
+        @error('release_date')
             {{ $message }}
         @enderror
     </div>
 
     <div>
-        <label for="retired-date">Retired Date</label>
-        <input type="date" name="retired-date" value="{{old('retired-date')}}">
-        @error('retired-date')
+        <label for="retired_date">Retired Date</label>
+        <input type="date" name="retired_date" value="{{old('retired_date')}}">
+        @error('retired_date')
             {{ $message }}
         @enderror
     </div>

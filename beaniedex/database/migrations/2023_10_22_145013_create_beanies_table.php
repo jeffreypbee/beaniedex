@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('beanies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('product_line_id')->constrained()->onDelete('cascade');
+            $table->foreignId('product_line_id')->constrained()->onDelete('cascade')->nullable();
             $table->string('species');
             $table->date('birthday')->nullable();
             $table->date('release_date')->nullable();

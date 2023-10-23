@@ -28,4 +28,24 @@ class BeanieController extends Controller
             'productLines' => ProductLine::all()
         ]);
     }
+
+    // Store Beanie
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'species' => '',
+            'product_line_id' => '',
+            'birthday' => '',
+            'release_date' => '',
+            'retired_date' => '',
+            'poem' => '',
+            'notes' => ''
+        ]);
+
+        $productLine = ProductLine::find($formFields['product_line_id']);
+
+        $beanie = $productLine->beanies()->create($formFields);
+
+        return redirect('/beanies')->with('message', 'Beanie created successfully!');
+    }
 }

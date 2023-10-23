@@ -19,11 +19,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Beanies routes
+
 Route::get('/beanies', [BeanieController::class, 'index']);
 
 Route::get('/beanies/create', [BeanieController::class, 'create']);
 
 Route::get('/beanies/{beanie}', [BeanieController::class, 'show']);
+
+Route::post('/beanies', [BeanieController::class, 'store']);
+
+
+// Product Lines routes
 
 Route::get('/productlines', [ProductLineController::class, 'index']);
 
