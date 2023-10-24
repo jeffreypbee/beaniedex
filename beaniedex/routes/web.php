@@ -29,6 +29,9 @@ Route::get('/beanies/{beanie}', [BeanieController::class, 'show']);
 
 Route::post('/beanies', [BeanieController::class, 'store']);
 
+Route::get('/beanies/{beanie}/edit', [BeanieController::class, 'edit']);
+
+Route::put('/beanies/{beanie}', [BeanieController::class, 'update']);
 
 // Product Lines routes
 

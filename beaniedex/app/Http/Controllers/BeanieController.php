@@ -48,4 +48,30 @@ class BeanieController extends Controller
 
         return redirect('/beanies')->with('message', 'Beanie created successfully!');
     }
+
+    // Show Edit form
+    public function edit(Beanie $beanie) {
+        return view('beanies.edit', [
+            'beanie' => $beanie,
+            'productLines' => ProductLine::all()
+        ]);
+    }
+
+    // Update Beanie data
+    public function update(Request $request, Beanie $beanie) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'species' => '',
+            'product_line_id' => '',
+            'birthday' => '',
+            'release_date' => '',
+            'retired_date' => '',
+            'poem' => '',
+            'notes' => ''
+        ]);
+
+        $beanie->update($formFields);
+
+        return redirect('/beanies')->with('message', 'Beanie updated successfully!');
+    }
 }

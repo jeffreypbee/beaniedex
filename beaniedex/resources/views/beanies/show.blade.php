@@ -17,7 +17,7 @@
                 {!! nl2br(e($beanie->poem)); !!}
             </p>
         </div>
-        
+        <a href="/beanies/{{$beanie->id}}/edit">Edit</a>
     </div>    
 </div>
 
