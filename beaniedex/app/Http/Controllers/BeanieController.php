@@ -74,4 +74,11 @@ class BeanieController extends Controller
 
         return redirect('/beanies')->with('message', 'Beanie updated successfully!');
     }
+
+    // Destroy Beanie
+    public function destroy(Beanie $beanie) {
+        $beanie->delete();
+
+        return redirect('/beanies')->with('messae', 'Beanie deleted successfully');
+    }
 }

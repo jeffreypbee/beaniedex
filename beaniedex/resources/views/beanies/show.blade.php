@@ -18,6 +18,11 @@
             </p>
         </div>
         <a href="/beanies/{{$beanie->id}}/edit">Edit</a>
+        <form method="POST" action="/beanies/{{$beanie->id}}">
+            @csrf
+            @method('DELETE')
+            <button>Delete</button>
+        </form>
     </div>    
 </div>
 

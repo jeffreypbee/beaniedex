@@ -33,6 +33,8 @@ Route::get('/beanies/{beanie}/edit', [BeanieController::class, 'edit']);
 
 Route::put('/beanies/{beanie}', [BeanieController::class, 'update']);
 
+Route::delete('/beanies/{beanie}', [BeanieController::class, 'destroy']);
+
 // Product Lines routes
 
 Route::get('/productlines', [ProductLineController::class, 'index']);
