@@ -1,3 +1,8 @@
+:root {
+    --purple: rgb(131,58,180);
+    --pink: rgb(253,29,29);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -72,7 +77,7 @@ div#user-bar {
 
 a {
     text-decoration: none;
-    color: darkred;
+    color: var(--purple);
 }
 
 footer {
@@ -82,11 +87,18 @@ footer {
     justify-content: center;
 }
 
+h2 {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, transparent, var(--pink), transparent);
+    color: white;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .card {
@@ -97,7 +109,7 @@ footer {
 
 .card:hover {
     border: 2px solid white;
-    box-shadow: 2px 5px 0px #3355;
+    box-shadow: 2px 5px 0px var(--purple);
 }
 
 .beanie-card img {
@@ -107,11 +119,28 @@ footer {
 }
 
 .beanie-card {
-    transition: transform .5s;
+    transition: all .5s;
+    position: relative;
 }
 
 .beanie-card:hover {
-    transform: rotate(-10deg);
+    /* transform: rotate(-10deg); */
+    scale: 110%;
+}
+
+.beanie-card .info {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: -5px;
+    padding: 3px;
+    width: 80%;
+    background: linear-gradient(to right, var(--purple), transparent);
+}
+
+.beanie-card .name {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .create-form {
