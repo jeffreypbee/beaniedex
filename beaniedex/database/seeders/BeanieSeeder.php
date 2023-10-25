@@ -72,5 +72,77 @@ class BeanieSeeder extends Seeder
                         If you want him just say when\n
                         He'll peek out from his den!"
         ]);
+
+        Beanie::factory()->create([
+            'name' => 'Congo',
+            'product_line_id' => 1,
+            'species' => 'gorilla',
+            'birthday' => '1996-11-09',
+            'image' => 'https://i.ebayimg.com/images/g/pY8AAOSwInxfaE1P/s-l640.jpg',
+            'poem' => "Black as the night and fierce is he\n
+                        On the ground or in a tree\n
+                        Strong and mighty as the Congo\n
+                        He's related to our Bongo!"
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Puffer',
+            'product_line_id' => 1,
+            'species' => 'puffin',
+            'birthday' => '1997-11-03',
+            'image' => 'https://www.bbtoystore.com/mm5/beanies/puffer.jpg',
+            'poem' => "What in the world does a puffin do?\n
+                        We're sure that you would like to know too\n
+                        We asked Puffer how she spends her days\n
+                        Before she answered, she flew away!"
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Twigs',
+            'product_line_id' => 1,
+            'species' => 'giraffe',
+            'birthday' => '1995-05-19',
+            'image' => 'https://m.media-amazon.com/images/I/61xzewITExL.jpg'
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Schweetheart',
+            'product_line_id' => 1,
+            'species' => 'orangutan',
+            'birthday' => '1999-01-23',
+            'image' => 'https://partyquackers.com/wp-content/uploads/2016/03/Beanie-babie-schweetheart-orangatang-pq.jpg'
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Jake',
+            'product_line_id' => 1,
+            'species' => 'duck',
+            'birthday' => '1997-04-16',
+            'image' => 'https://www.bbtoystore.com/mm5/beanies/jake_540x540.jpg'
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Osito',
+            'product_line_id' => 1,
+            'species' => 'bear',
+            'birthday' => '1999-02-05',
+            'image' => 'https://www.bbtoystore.com/mm5/beanies/osito_540x540.jpg'
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Rocket',
+            'product_line_id' => 1,
+            'species' => 'bluejay',
+            'birthday' => '1997-03-12',
+            'image' => 'https://m.media-amazon.com/images/I/51ZoWy8+QvL.jpg'
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Beak',
+            'product_line_id' => 1,
+            'species' => 'kiwi',
+            'birthday' => '1998-02-03',
+            'image' => 'https://m.media-amazon.com/images/I/61pmz08NoDL._AC_UF894,1000_QL80_.jpg'
+        ]);
     }
 }
