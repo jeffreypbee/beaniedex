@@ -8,12 +8,14 @@
     </head>
     <body>
         <header>
-            <h1><a href="/">BeanieDex</a></h1>
+            <h1><a href="/">the<br />BEANIE<br />DEX</a></h1>
             <nav>
-                <a href="/beanies">Beanies</a> | 
+                <a href="/beanies">Beanies</a>
                 <a href="/productlines">Product Lines</a>
             </nav>
         </header>
+
+        <div id="user-bar">User</div>
 
         <main>
             {{$slot}}
