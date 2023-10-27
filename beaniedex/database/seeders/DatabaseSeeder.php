@@ -26,5 +26,8 @@ class DatabaseSeeder extends Seeder
         $beanieSeeder = new BeanieSeeder();
         $beanieSeeder->run();
 
+        $variantSeeder = new BeanieVariantSeeder();
+        $variantSeeder->run();
+
     }
 }
