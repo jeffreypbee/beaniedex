@@ -5,8 +5,11 @@
     
         {{-- <img src="{{$beanie->image}}" alt="{{$beanie->name}}" title="{{$beanie->name}}"> --}}
         <div class="info">
+            @if (count($beanie->variants) > 0)
+                <div class="variant">({{ count($beanie->variants) }} variants)</div>
+            @endif
             <div class="name">{{ $beanie->name }}</div>
-            <div class="variant">(Variant Data)</div>
+            
         </div>
     
 </div>
