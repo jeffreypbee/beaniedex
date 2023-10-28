@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->longText('notes')->nullable();
             $table->foreignId('beanie_id')->constrained()->onDelete('cascade');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
