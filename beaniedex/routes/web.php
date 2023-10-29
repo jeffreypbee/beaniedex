@@ -43,6 +43,10 @@ Route::get('/beanies/{beanie}/variants/create', [BeanieVariantController::class,
 
 Route::post('/variants', [BeanieVariantController::class, 'store']);
 
+Route::get('/variants/{variant}/edit', [BeanieVariantController::class, 'edit']);
+
+Route::put('/variants/{variant}', [BeanieVariantController::class, 'update']);
+
 // Product Lines routes
 
 Route::get('/productlines', [ProductLineController::class, 'index']);

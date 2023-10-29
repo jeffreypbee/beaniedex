@@ -34,18 +34,30 @@
         
         <div class="beanie-variants width-100">
             <h3>Variants</h3>
+            <div>
+                <a href="/beanies/{{$beanie->id}}/variants/create">Add Variant</a>
+            </div>
+
             @if (count($beanie->variants) > 0)
             @foreach ($beanie->variants as $variant)
                 <div class="variant">
                     <img src="{{$variant->image}}" alt="">
-                    {{ $variant->name }}
+                    <div>{{ $variant->name }}</div>
+                    <div>
+                        <a href="/variants/{{$variant->id}}/edit">Edit</a>
+                        <form action="/variants/{{$variant->id}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button>Delete</button>
+                        </form>
+                    </div>
                 </div>
             @endforeach
                 
             @else
                 <div>No variants found for this beanie.</div>            
             @endif
-                <a href="/beanies/{{$beanie->id}}/variants/create">Add Variant</a>
+                
         </div>
        
         

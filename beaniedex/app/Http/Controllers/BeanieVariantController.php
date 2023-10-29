@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beanie;
+use App\Models\BeanieVariant;
 use Illuminate\Http\Request;
 
 class BeanieVariantController extends Controller
@@ -26,5 +27,23 @@ class BeanieVariantController extends Controller
         $variant = $beanie->variants()->create($formFields);
 
         return redirect('/beanies/' . $beanie->id)->with('message', 'Variant created successfully!');
+    }
+
+    public function edit(BeanieVariant $variant) {
+        return view('variants.edit', [
+            'variant' => $variant
+        ]);
+    }
+
+    public function update(Request $request, BeanieVariant $variant) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'image' => '',
+            'notes' => ''
+        ]);
+
+        $variant->update($formFields);
+
+        return redirect('/beanies/' . $variant->beanieId)->with('message', 'Variant successfully updated!');
     }
 }
