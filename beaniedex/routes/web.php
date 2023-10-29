@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\BeanieController;
+use App\Http\Controllers\BeanieVariantController;
 use App\Http\Controllers\ProductLineController;
+use App\Models\BeanieVariant;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +36,12 @@ Route::get('/beanies/{beanie}/edit', [BeanieController::class, 'edit']);
 Route::put('/beanies/{beanie}', [BeanieController::class, 'update']);
 
 Route::delete('/beanies/{beanie}', [BeanieController::class, 'destroy']);
+
+// Variants
+
+Route::get('/beanies/{beanie}/variants/create', [BeanieVariantController::class, 'create']);
+
+Route::post('/variants', [BeanieVariantController::class, 'store']);
 
 // Product Lines routes
 

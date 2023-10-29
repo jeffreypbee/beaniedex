@@ -10,6 +10,13 @@ class BeanieVariant extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'beanie_id',
+        'notes',
+        'image'
+    ];
+
     public function Beanie():BelongsTo
     {
         return $this->belongsTo(Beanie::class);

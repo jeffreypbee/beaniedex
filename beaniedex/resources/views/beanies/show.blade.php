@@ -45,6 +45,7 @@
             @else
                 <div>No variants found for this beanie.</div>            
             @endif
+                <a href="/beanies/{{$beanie->id}}/variants/create">Add Variant</a>
         </div>
        
         
