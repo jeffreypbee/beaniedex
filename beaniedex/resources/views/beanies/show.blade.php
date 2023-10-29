@@ -14,7 +14,7 @@
             <img src="{{$beanie->image}}" alt="">
             <div class="beanie-stats">            
                 <p>Product: <a href="/productlines/{{$beanie->productLine->id}}">{{ $beanie->productLine->name }}</a></p>
-                <p>Species: {{ $beanie->species }}</p>
+                <p>Species: <a href="/beanies?species={{$beanie->species}}">{{ $beanie->species }}</a></p>
                 <p>Birthday: {{ $beanie->birthday }}</p>
                 <p>Released: {{ $beanie->releaseDate }}</p>
                 <p>Retired: {{ $beanie->retiredDate }}</p>

@@ -32,4 +32,17 @@ class Beanie extends Model
     {
         return $this->hasMany(BeanieVariant::class);
     }
+
+    public function scopeFilter($query, array $filters) {
+        if ($filters['search'] ?? false) {
+            $searchTerm = '%' . request('search') . '%';
+            $query->where('name', 'like', $searchTerm)->
+            orWhere('species', 'like', $searchTerm)->
+            orWhere('notes', 'like', $searchTerm);
+        }
+
+        if ($filters['species'] ?? false) {
+            $query->where('species', 'like', request('species'));
+        }
+    }
 }

@@ -11,7 +11,7 @@ class BeanieController extends Controller
     // Show all Beanies
     public function index() {
         return view('beanies.index', [
-            'beanies' => Beanie::all()
+            'beanies' => Beanie::orderBy('name')->filter(request(['search', 'species']))->get()
         ]);
     }
 
