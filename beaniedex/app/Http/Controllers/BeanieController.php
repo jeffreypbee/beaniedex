@@ -47,7 +47,7 @@ class BeanieController extends Controller
 
         $beanie = $productLine->beanies()->create($formFields);
 
-        return redirect('/beanies')->with('message', 'Beanie created successfully!');
+        return redirect('/beanies/' . $beanie->id)->with('message', 'Beanie created successfully!');
     }
 
     // Show Edit form

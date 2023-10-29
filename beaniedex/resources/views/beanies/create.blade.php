@@ -56,6 +56,14 @@
             {{ $message }}
         @enderror
     </div>
+
+    <div>
+        <label for="image">Image</label>
+        <input type="text" name="image" value="{{old('image')}}">
+        @error('image')
+            {{ $message }}
+        @enderror
+    </div>
     
     <div>
         <label for="poem">Poem</label>

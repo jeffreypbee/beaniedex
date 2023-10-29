@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('product_line_id')->constrained()->onDelete('cascade')->nullable();
-            $table->string('species');
+            $table->string('species')->nullable();
             $table->date('birthday')->nullable();
             $table->date('release_date')->nullable();
             $table->date('retired_date')->nullable();
