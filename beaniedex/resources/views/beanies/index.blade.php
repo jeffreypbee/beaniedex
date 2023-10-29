@@ -10,7 +10,7 @@
 
 </form>
 
-<a href="/beanies/create">Add New Beanie</a>
+<a href="/beanies/create"><button>Add New Beanie</button></a>
 
 @if (count($beanies) > 0)
     <x-beanie-card-container :beanies="$beanies" />

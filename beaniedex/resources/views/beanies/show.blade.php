@@ -11,7 +11,7 @@
             </h2>
         </div>
         <div class="beanie-info width-100">
-            <img src="{{$beanie->image}}" alt="">
+            <img src="{{$beanie->image}}" alt="" class="beanie-image">
             <div class="beanie-stats">            
                 <p>Product: <a href="/productlines/{{$beanie->productLine->id}}">{{ $beanie->productLine->name }}</a></p>
                 <p>Species: <a href="/beanies?species={{$beanie->species}}">{{ $beanie->species }}</a></p>
@@ -35,25 +35,16 @@
         <div class="beanie-variants width-100">
             <h3>Variants</h3>
             <div>
-                <a href="/beanies/{{$beanie->id}}/variants/create">Add Variant</a>
+                <a href="/beanies/{{$beanie->id}}/variants/create"><button>Add Variant</button></a>
             </div>
 
             @if (count($beanie->variants) > 0)
-            @foreach ($beanie->variants as $variant)
-                <div class="variant">
-                    <img src="{{$variant->image}}" alt="">
-                    <div>{{ $variant->name }}</div>
-                    <div>
-                        <a href="/variants/{{$variant->id}}/edit">Edit</a>
-                        <form action="/variants/{{$variant->id}}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </div>
-                </div>
-            @endforeach
-                
+            <div class="variant-card-container">
+                @foreach ($beanie->variants as $variant)
+                    <x-variant-card :variant="$variant" />
+                @endforeach
+            </div>
+            
             @else
                 <div>No variants found for this beanie.</div>            
             @endif
@@ -62,7 +53,7 @@
        
         
         <div class="buttons">
-            <a href="/beanies/{{$beanie->id}}/edit">Edit</a>
+            <a href="/beanies/{{$beanie->id}}/edit"><button>Edit</button></a>
             <form method="POST" action="/beanies/{{$beanie->id}}">
                 @csrf
                 @method('DELETE')

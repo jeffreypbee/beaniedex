@@ -74,7 +74,12 @@ nav a {
     padding: 5px;
     width: 100%;
     text-align: right;
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
+    transition: all .5s;
+}
+
+nav a:hover {
+    scale: 110%;
 }
 
 div#user-bar {
@@ -101,6 +106,18 @@ h2 {
     text-align: center;
     background: linear-gradient(to right, transparent, var(--purple), transparent);
     color: white;
+}
+
+button {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--yellow);
+    color: var(--purple);
+    border: 1px solid var(--purple);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .card-container {
@@ -142,7 +159,7 @@ h2 {
     justify-content: space-between;
 }
 
-.beanie-card .name {
+.beanie-card .name, .variant-card .name {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
@@ -216,6 +233,12 @@ h2 {
 }
 
 .show-beanie .beanie-variants {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.variant-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -223,13 +246,7 @@ h2 {
     gap: 5px;
 }
 
-.beanie-variants .variant {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.show-beanie img {
+.show-beanie .beanie-image {
     max-width: 200px;
     border-radius: 20px;
     box-shadow: 2px 5px 5px #3335;
@@ -246,6 +263,12 @@ h2 {
     align-items: center;
     right: -25px;
     top: 10px;
+    gap: 5px;
+}
+
+.show-beanie .buttons button {
+    width: 50px;
+    height: 50px;
 }
 
 .show-beanie h3 {
@@ -282,4 +305,21 @@ h2 {
     background: #fff5;
     border-radius: 20px;
     text-align: center;
+}
+
+.variant-card {
+    transition: all .5s;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 2px 5px 5px #3335;
+    border-radius: 20px;
+}
+
+.variant-card .edit-delete-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
