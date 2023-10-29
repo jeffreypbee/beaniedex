@@ -2,12 +2,14 @@
 
 <h2>Product Lines</h2>
 
-@foreach ($productLines as $productLine)
-    <div>
-        <a href="/productlines/{{$productLine->id}}">{{ $productLine->name }}</a>
-    </div>
-@endforeach
-
 <a href="/productlines/create"><button>Add New Product Line</button></a>
+
+<div class="product-line-card-container">
+@foreach ($productLines as $productLine)
+    <x-product-line-card :productLine="$productLine" />
+@endforeach
+</div>
+
+
 
 </x-layout>

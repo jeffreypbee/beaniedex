@@ -10,7 +10,13 @@ class ProductLine extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description'];
+    protected $fillable = [
+        'name', 
+        'description',
+        'plural',
+        'image',
+        'color'
+    ];
 
     public function beanies(): HasMany
     {

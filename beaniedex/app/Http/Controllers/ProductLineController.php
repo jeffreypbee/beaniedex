@@ -30,7 +30,11 @@ class ProductLineController extends Controller
     // Store ProductLine data
     public function store(Request $request) {
         $formFields = $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'description' => '',
+            'plural' => 'required',
+            'image' => '',
+            'color' => 'required'
         ]);
 
         ProductLine::create($formFields);

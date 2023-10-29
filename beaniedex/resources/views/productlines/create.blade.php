@@ -6,9 +6,33 @@
     @csrf
 
     <div>
-        <label for="name">Name</label>
+        <label for="name">Name (singular)</label>
         <input type="text" name="name" value="{{old('name')}}">
         @error('name')
+            <p>{{$message}}</p>
+        @enderror
+    </div>
+
+    <div>
+        <label for="plural">Name (plural)</label>
+        <input type="text" name="plural" value="{{old('plural')}}">
+        @error('plural')
+            <p>{{$message}}</p>
+        @enderror
+    </div>
+
+    <div>
+        <label for="image">Image</label>
+        <input type="text" name="image" value="{{old('image')}}">
+        @error('image')
+            <p>{{$message}}</p>
+        @enderror
+    </div>
+
+    <div>
+        <label for="color">Color</label>
+        <input type="color" name="color" value="{{old('color')}}">
+        @error('color')
             <p>{{$message}}</p>
         @enderror
     </div>

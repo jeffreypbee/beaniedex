@@ -13,7 +13,7 @@
         <div class="beanie-info width-100">
             <img src="{{$beanie->image}}" alt="" class="beanie-image">
             <div class="beanie-stats">            
-                <p>Product: <a href="/productlines/{{$beanie->productLine->id}}">{{ $beanie->productLine->name }}</a></p>
+                <x-product-line-pill :productLine="$beanie->productLine" />
                 <p>Species: <a href="/beanies?species={{$beanie->species}}">{{ $beanie->species }}</a></p>
                 <p>Birthday: {{ $beanie->birthday }}</p>
                 <p>Released: {{ $beanie->releaseDate }}</p>
