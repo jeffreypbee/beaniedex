@@ -46,4 +46,11 @@ class BeanieVariantController extends Controller
 
         return redirect('/beanies/' . $variant->beanieId)->with('message', 'Variant successfully updated!');
     }
+
+    public function destroy(BeanieVariant $variant) {
+        $beanieId = $variant->beanieId;
+        $variant->delete();
+
+        return redirect('/beanies/' . $beanieId)->with('message', 'Beanie Variant successfully deleted!');
+    }
 }

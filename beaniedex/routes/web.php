@@ -47,6 +47,8 @@ Route::get('/variants/{variant}/edit', [BeanieVariantController::class, 'edit'])
 
 Route::put('/variants/{variant}', [BeanieVariantController::class, 'update']);
 
+Route::delete('/variants/{variant}', [BeanieVariantController::class, 'destroy']);
+
 // Product Lines routes
 
 Route::get('/productlines', [ProductLineController::class, 'index']);
