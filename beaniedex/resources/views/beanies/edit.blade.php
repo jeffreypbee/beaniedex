@@ -60,6 +60,14 @@
                 {{ $message }}
             @enderror
         </div>
+
+        <div>
+            <label for="image">Image</label>
+            <input type="text" name="image" value="{{$beanie->image}}">
+            @error('image')
+                {{ $message }}
+            @enderror
+        </div>
         
         <div>
             <label for="poem">Poem</label>

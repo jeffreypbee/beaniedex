@@ -39,7 +39,8 @@ class BeanieController extends Controller
             'release_date' => '',
             'retired_date' => '',
             'poem' => '',
-            'notes' => ''
+            'notes' => '',
+            'image' => ''
         ]);
 
         $productLine = ProductLine::find($formFields['product_line_id']);
@@ -67,12 +68,13 @@ class BeanieController extends Controller
             'release_date' => '',
             'retired_date' => '',
             'poem' => '',
-            'notes' => ''
+            'notes' => '',
+            'image' => ''
         ]);
 
         $beanie->update($formFields);
 
-        return redirect('/beanies')->with('message', 'Beanie updated successfully!');
+        return redirect('/beanies/' . $beanie->id)->with('message', 'Beanie updated successfully!');
     }
 
     // Destroy Beanie
