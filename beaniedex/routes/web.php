@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\BeanieController;
-use App\Http\Controllers\BeanieVariantController;
-use App\Http\Controllers\ProductLineController;
+use App\Models\Beanie;
 use App\Models\BeanieVariant;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeanieController;
+use App\Http\Controllers\ProductLineController;
+use App\Http\Controllers\BeanieVariantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'randomBeanie' => Beanie::inRandomOrder()->first()
+    ]);
 });
 
 // Beanies routes

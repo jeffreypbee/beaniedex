@@ -5,7 +5,8 @@
     --pink-lucent: rgba(253,29,29,.5);
     --yellow: rgb(245,252,69);
     --yellow-lucent: rgba(252,202,17,.3);
-    --gradient: linear-gradient(160deg, rgba(131,58,180,.9) 0%, rgba(253,29,29,.5) 29%, rgba(252,202,17,.3) 59%, rgba(245,252,69,0) 100%);
+    --gradient-lucent: linear-gradient(160deg, rgba(131,58,180,.9) 0%, rgba(253,29,29,.5) 29%, rgba(252,202,17,.3) 59%, rgba(245,252,69,0) 100%);
+    --gradient: linear-gradient(160deg, rgb(131,58,180) 0%, rgb(253,29,29) 29%, rgb(252,202,17) 59%, rgb(245,252,69) 100%);
 }
 
 * {
@@ -37,6 +38,17 @@ header {
     gap: 5px;
     padding: 5px 0 0 10px;
     width: 150px;
+}
+
+h1.index-logo {
+    margin: 10px 0;
+    line-height: 1.8rem;
+    text-align: center;
+    font-size: 3rem;
+    
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header h1 {
