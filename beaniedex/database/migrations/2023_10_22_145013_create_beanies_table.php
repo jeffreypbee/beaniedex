@@ -22,6 +22,8 @@ return new class extends Migration
             $table->longtext('poem')->nullable();
             $table->longtext('notes')->nullable();
             $table->string('image')->nullable();
+            $table->string('number')->nullable();
+            $table->string('version')->nullable();
             $table->timestamps();
         });
     }

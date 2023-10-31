@@ -40,17 +40,6 @@ Route::put('/beanies/{beanie}', [BeanieController::class, 'update']);
 
 Route::delete('/beanies/{beanie}', [BeanieController::class, 'destroy']);
 
-// Variants
-
-Route::get('/beanies/{beanie}/variants/create', [BeanieVariantController::class, 'create']);
-
-Route::post('/variants', [BeanieVariantController::class, 'store']);
-
-Route::get('/variants/{variant}/edit', [BeanieVariantController::class, 'edit']);
-
-Route::put('/variants/{variant}', [BeanieVariantController::class, 'update']);
-
-Route::delete('/variants/{variant}', [BeanieVariantController::class, 'destroy']);
 
 // Product Lines routes
 

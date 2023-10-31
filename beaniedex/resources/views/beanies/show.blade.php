@@ -29,28 +29,7 @@
         <div class="beanie-notes width-100">
             <h3>Notes</h3>
             {{ $beanie->notes }}
-        </div>
-
-        
-        <div class="beanie-variants width-100">
-            <h3>Variants</h3>
-            <div>
-                <a href="/beanies/{{$beanie->id}}/variants/create"><button>Add Variant</button></a>
-            </div>
-
-            @if (count($beanie->variants) > 0)
-            <div class="variant-card-container">
-                @foreach ($beanie->variants as $variant)
-                    <x-variant-card :variant="$variant" />
-                @endforeach
-            </div>
-            
-            @else
-                <div>No variants found for this beanie.</div>            
-            @endif
-                
-        </div>
-       
+        </div>       
         
         <div class="buttons">
             <a href="/beanies/{{$beanie->id}}/edit"><button>Edit</button></a>

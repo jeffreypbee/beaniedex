@@ -28,11 +28,6 @@ class Beanie extends Model
         return $this->belongsTo(ProductLine::class);
     }
 
-    public function variants(): HasMany
-    {
-        return $this->hasMany(BeanieVariant::class);
-    }
-
     public function scopeFilter($query, array $filters) {
         if ($filters['search'] ?? false) {
             $searchTerm = '%' . request('search') . '%';

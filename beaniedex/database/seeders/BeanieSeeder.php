@@ -66,6 +66,22 @@ class BeanieSeeder extends Seeder
             'product_line_id' => 1,
             'species' => 'fox',
             'birthday' => '1996-09-12',
+            'number' => '04115',
+            'version' => 'Brown Belly',
+            'image' => 'https://treasurekeeper.com/cdn/shop/products/tybb_Sly.jpg?v=1626206089',
+            'poem' => "Sly is a fox and tricky is he\n
+                        Please don't chase him, let him be\n
+                        If you want him just say when\n
+                        He'll peek out from his den!"
+        ]);
+
+        Beanie::factory()->create([
+            'name' => 'Sly',
+            'product_line_id' => 1,
+            'species' => 'fox',
+            'birthday' => '1996-09-12',
+            'number' => '04115',
+            'version' => 'White Belly',
             'image' => 'https://i5.walmartimages.com/asr/e6a46594-0bdc-4eb1-9121-61924eaab562.23d42d00b743da884ee531d7f1369192.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF',
             'poem' => "Sly is a fox and tricky is he\n
                         Please don't chase him, let him be\n
