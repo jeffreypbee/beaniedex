@@ -48,6 +48,7 @@ h1.index-logo {
     
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -123,9 +124,9 @@ h2 {
 button {
     border-radius: 5px;
     padding: 5px;
-    background-color: var(--yellow);
-    color: var(--purple);
-    border: 1px solid var(--purple);
+    background-color: var(--pink);
+    color: white;
+    border: none;
 }
 
 button:hover {
@@ -142,7 +143,7 @@ button:hover {
 
 .beanie-card img {
     height: 180px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 20px;
 }
 
@@ -162,6 +163,12 @@ button:hover {
     scale: 110%;
 }
 
+.beanie-card .productline {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
 .beanie-card .info {
     width: 100%;
     color: white;
@@ -169,23 +176,18 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: var(--purple);
+    padding: 5px;
+    text-align: center;
 }
 
-.beanie-card .name, .variant-card .name {
-    text-align: center;
+.beanie-card .info div {
+    margin: 0px;
+}
+
+.beanie-card .name {
     font-size: 1.2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 0 var(--purple);
-    background: var(--purple-lucent);
-    border-radius: 0 0 20px 20px;
-    padding: 5px;
-}
-
-.beanie-card .variant {
-    color: var(--purple);
-    background-color: var(--yellow);
-    padding: 5px;
-    text-align: center;
+    font-weight: bold;    
 }
 
 .create-form {
@@ -242,20 +244,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.show-beanie .beanie-variants {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
-.variant-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    gap: 5px;
 }
 
 .show-beanie .beanie-image {
@@ -317,23 +305,6 @@ button:hover {
     background: #fff5;
     border-radius: 20px;
     text-align: center;
-}
-
-.variant-card {
-    transition: all .5s;
-    width: 150px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    box-shadow: 2px 5px 5px #3335;
-    border-radius: 20px;
-}
-
-.variant-card .edit-delete-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
 }
 
 .show-product-line .product-line-image {
