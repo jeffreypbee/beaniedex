@@ -40,7 +40,9 @@ class BeanieController extends Controller
             'retired_date' => '',
             'poem' => '',
             'notes' => '',
-            'image' => ''
+            'image' => '',
+            'version' => '',
+            'number' => ''
         ]);
 
         $productLine = ProductLine::find($formFields['product_line_id']);
@@ -69,7 +71,9 @@ class BeanieController extends Controller
             'retired_date' => '',
             'poem' => '',
             'notes' => '',
-            'image' => ''
+            'image' => '',
+            'version' => '',
+            'number' => ''
         ]);
 
         $beanie->update($formFields);

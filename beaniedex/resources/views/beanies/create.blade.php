@@ -11,7 +11,23 @@
         @error('name')
             {{ $message }}
         @enderror
-    </div>    
+    </div> 
+    
+    <div>
+        <label for="number">Prodcut Number</label>
+        <input type="text" name="number" value="{{old('number')}}">
+        @error('number')
+            {{ $message }}
+        @enderror
+    </div>
+
+    <div>
+        <label for="version">Version</label>
+        <input type="text" name="version" value="{{old('version')}}">
+        @error('version')
+            {{ $message }}
+        @enderror
+    </div>
 
     <div>
         <label for="species">Species</label>

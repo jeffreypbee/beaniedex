@@ -20,7 +20,9 @@ class Beanie extends Model
         'retired_date',
         'poem',
         'notes',
-        'image'
+        'image',
+        'number',
+        'version'
     ];
 
     public function productLine(): BelongsTo
