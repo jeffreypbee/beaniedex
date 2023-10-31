@@ -12,10 +12,6 @@
 
 <a href="/beanies/create"><button>Add New Beanie</button></a>
 
-@if (count($beanies) > 0)
-    <x-beanie-card-container :beanies="$beanies" />
-@else
-    <div>No Beanies Found</div>
-@endif
+<x-beanie-card-container :beanies="$beanies" />
 
 </x-layout>

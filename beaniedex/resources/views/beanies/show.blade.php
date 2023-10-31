@@ -14,6 +14,8 @@
             <img src="{{$beanie->image}}" alt="" class="beanie-image">
             <div class="beanie-stats">            
                 <x-product-line-pill :productLine="$beanie->productLine" />
+                <p>Version: {{ $beanie->version }}</p>
+                <p>Product Number: {{ $beanie->number }}</p>
                 <p>Species: <a href="/beanies?species={{$beanie->species}}">{{ $beanie->species }}</a></p>
                 <p>Birthday: {{ $beanie->birthday }}</p>
                 <p>Released: {{ $beanie->releaseDate }}</p>
@@ -26,10 +28,16 @@
                 {!! nl2br(e($beanie->poem)); !!}
             </p>            
         </div>
+
         <div class="beanie-notes width-100">
             <h3>Notes</h3>
             {{ $beanie->notes }}
-        </div>       
+        </div>  
+        
+        <div class="versions width-100">
+            <h3>Versions</h3>
+            <x-beanie-card-container :beanies="$versions" />
+        </div>
         
         <div class="buttons">
             <a href="/beanies/{{$beanie->id}}/edit"><button>Edit</button></a>

@@ -202,6 +202,12 @@ button:hover {
     justify-content: space-between;
 }
 
+.show-beanie .beanie-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .show-beanie, .show-product-line {
     height: 100%;
     width: 80%;
@@ -247,9 +253,8 @@ button:hover {
 }
 
 .show-beanie .beanie-image {
-    max-width: 200px;
-    border-radius: 20px;
-    box-shadow: 2px 5px 5px #3335;
+    max-width: 250px;
+    object-fit: contain;
 }
 
 .width-100 {

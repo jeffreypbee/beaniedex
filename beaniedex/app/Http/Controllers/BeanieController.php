@@ -18,7 +18,8 @@ class BeanieController extends Controller
     // Show a single Beanie
     public function show(Beanie $beanie) {
         return view('beanies.show', [
-            'beanie' => $beanie
+            'beanie' => $beanie,
+            'versions' => Beanie::where('number', '!=', '')->where('number', $beanie->number)->get()
         ]);
     }
 
