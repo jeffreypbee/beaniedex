@@ -21,7 +21,17 @@
                 <p>Released: {{ $beanie->releaseDate }}</p>
                 <p>Retired: {{ $beanie->retiredDate }}</p>
             </div>
-        </div>        
+        </div>    
+        
+        <div class="beanie-tags width-100">
+            <h3>Tags</h3>
+            <div class="tag-container">
+                @foreach ($beanie->tags as $tag)
+                    <div class="tag">{{ $tag->name }}</div>
+                @endforeach
+            </div>            
+        </div>
+        
         <div class="beanie-poem width-100">
             <h3>Poem</h3>
             <p class="poem">

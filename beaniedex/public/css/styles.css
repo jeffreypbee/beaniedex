@@ -246,6 +246,21 @@ button:hover {
     background: linear-gradient(to right, white, transparent);
 }
 
+.show-beanie .tag-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.show-beanie .tag {
+    padding: 10px;
+    background-color: var(--purple);
+    color: white;
+}
+
 .show-beanie .beanie-poem {
     display: flex;
     flex-direction: column;

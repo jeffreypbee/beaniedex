@@ -26,7 +26,7 @@ class BeanieSeeder extends Seeder
         ]);
         $beanie->tags()->attach([1, 4]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Curly',
             'product_line_id' => 1,
             'species' => 'bear',
@@ -39,7 +39,7 @@ class BeanieSeeder extends Seeder
         ]);
         $beanie->tags()->attach([1]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Strut',
             'product_line_id' => 1,
             'species' => 'rooster',
@@ -52,7 +52,7 @@ class BeanieSeeder extends Seeder
         ]);
         $beanie->tags()->attach([3, 4]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Mystic',
             'product_line_id' => 1,
             'species' => 'unicorn',
@@ -64,7 +64,7 @@ class BeanieSeeder extends Seeder
                         You'll see the magic in her blue eyes!"
         ]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Sly',
             'product_line_id' => 1,
             'species' => 'fox',
@@ -78,7 +78,7 @@ class BeanieSeeder extends Seeder
                         He'll peek out from his den!"
         ]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Sly',
             'product_line_id' => 1,
             'species' => 'fox',
@@ -92,7 +92,7 @@ class BeanieSeeder extends Seeder
                         He'll peek out from his den!"
         ]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Congo',
             'product_line_id' => 1,
             'species' => 'gorilla',
@@ -104,7 +104,7 @@ class BeanieSeeder extends Seeder
                         He's related to our Bongo!"
         ]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Puffer',
             'product_line_id' => 1,
             'species' => 'puffin',
@@ -117,7 +117,7 @@ class BeanieSeeder extends Seeder
         ]);
         $beanie->tags()->attach([3]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Twigs',
             'product_line_id' => 1,
             'species' => 'giraffe',
@@ -125,7 +125,7 @@ class BeanieSeeder extends Seeder
             'image' => 'https://m.media-amazon.com/images/I/61xzewITExL.jpg'
         ]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Schweetheart',
             'product_line_id' => 1,
             'species' => 'orangutan',
@@ -133,7 +133,7 @@ class BeanieSeeder extends Seeder
             'image' => 'https://partyquackers.com/wp-content/uploads/2016/03/Beanie-babie-schweetheart-orangatang-pq.jpg'
         ]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Jake',
             'product_line_id' => 1,
             'species' => 'duck',
@@ -142,7 +142,7 @@ class BeanieSeeder extends Seeder
         ]);
         $beanie->tags()->attach([3]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Osito',
             'product_line_id' => 1,
             'species' => 'bear',
@@ -151,7 +151,7 @@ class BeanieSeeder extends Seeder
         ]);
         $beanie->tags()->attach([1, 2]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Rocket',
             'product_line_id' => 1,
             'species' => 'bluejay',
@@ -160,7 +160,7 @@ class BeanieSeeder extends Seeder
         ]);
         $beanie->tags()->attach([3]);
 
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Beak',
             'product_line_id' => 1,
             'species' => 'kiwi',
