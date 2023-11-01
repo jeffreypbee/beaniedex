@@ -13,7 +13,7 @@ class BeanieSeeder extends Seeder
      */
     public function run(): void
     {
-        Beanie::factory()->create([
+        $beanie = Beanie::factory()->create([
             'name' => 'Peace',
             'product_line_id' => 1,
             'species' => 'bear',
@@ -24,6 +24,7 @@ class BeanieSeeder extends Seeder
                         Dance to the music, rock and roll is the sound\n
                         Symbols of peace and love abound!"
         ]);
+        $beanie->tags()->attach([1, 4]);
 
         Beanie::factory()->create([
             'name' => 'Curly',
@@ -36,6 +37,7 @@ class BeanieSeeder extends Seeder
                         To this bear always be true\n
                         He will be a friend to you!"
         ]);
+        $beanie->tags()->attach([1]);
 
         Beanie::factory()->create([
             'name' => 'Strut',
@@ -48,6 +50,7 @@ class BeanieSeeder extends Seeder
                         Hurry, wake up sleepy head\n
                         We have lots to do, get out of bed!"
         ]);
+        $beanie->tags()->attach([3, 4]);
 
         Beanie::factory()->create([
             'name' => 'Mystic',
@@ -112,6 +115,7 @@ class BeanieSeeder extends Seeder
                         We asked Puffer how she spends her days\n
                         Before she answered, she flew away!"
         ]);
+        $beanie->tags()->attach([3]);
 
         Beanie::factory()->create([
             'name' => 'Twigs',
@@ -136,6 +140,7 @@ class BeanieSeeder extends Seeder
             'birthday' => '1997-04-16',
             'image' => 'https://www.bbtoystore.com/mm5/beanies/jake_540x540.jpg'
         ]);
+        $beanie->tags()->attach([3]);
 
         Beanie::factory()->create([
             'name' => 'Osito',
@@ -144,6 +149,7 @@ class BeanieSeeder extends Seeder
             'birthday' => '1999-02-05',
             'image' => 'https://www.bbtoystore.com/mm5/beanies/osito_540x540.jpg'
         ]);
+        $beanie->tags()->attach([1, 2]);
 
         Beanie::factory()->create([
             'name' => 'Rocket',
@@ -152,6 +158,7 @@ class BeanieSeeder extends Seeder
             'birthday' => '1997-03-12',
             'image' => 'https://m.media-amazon.com/images/I/51ZoWy8+QvL.jpg'
         ]);
+        $beanie->tags()->attach([3]);
 
         Beanie::factory()->create([
             'name' => 'Beak',
@@ -160,5 +167,6 @@ class BeanieSeeder extends Seeder
             'birthday' => '1998-02-03',
             'image' => 'https://m.media-amazon.com/images/I/61pmz08NoDL._AC_UF894,1000_QL80_.jpg'
         ]);
+        $beanie->tags()->attach([3, 4]);
     }
 }

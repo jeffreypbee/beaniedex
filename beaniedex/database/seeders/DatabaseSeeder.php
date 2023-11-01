@@ -22,7 +22,10 @@ class DatabaseSeeder extends Seeder
 
         $productLineSeeder = new ProductLineSeeder();
         $productLineSeeder->run();
-        
+       
+        $tagSeeder = new TagSeeder();
+        $tagSeeder->run();
+         
         $beanieSeeder = new BeanieSeeder();
         $beanieSeeder->run();
 
