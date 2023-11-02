@@ -14,8 +14,8 @@
         </div>    
     
         <div>
-            <label for="number">Prodcut Number</label>
-            <input type="text" name="number" value="{{old('number')}}">
+            <label for="number">Product Number</label>
+            <input type="text" name="number" value="{{$beanie->number}}">
             @error('number')
                 {{ $message }}
             @enderror
@@ -23,7 +23,7 @@
     
         <div>
             <label for="version">Version</label>
-            <input type="text" name="version" value="{{old('version')}}">
+            <input type="text" name="version" value="{{$beanie->version}}">
             @error('version')
                 {{ $message }}
             @enderror
