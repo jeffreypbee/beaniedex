@@ -55,7 +55,11 @@ Route::post('/beanies/{beanie}/tags', [BeanieController::class, 'addTag']);
 
 Route::get('/tags', [TagController::class, 'index']);
 
+Route::get('/tags/create', [TagController::class, 'create']);
+
 Route::get('/tags/{tag}', [TagController::class, 'show']);
+
+Route::post('/tags', [TagController::class, 'store']);
 
 
 // Product Lines routes

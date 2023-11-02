@@ -10,6 +10,11 @@ class Tag extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'description'
+    ];
+
     public function beanies(): BelongsToMany
     {
         return $this->belongsToMany(Beanie::class);

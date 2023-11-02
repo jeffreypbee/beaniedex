@@ -20,4 +20,21 @@ class TagController extends Controller
             'tag' => $tag
         ]);
     }
+
+    // Show create form
+    public function create() {
+        return view('tags.create');
+    }
+
+    // Store Tag
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'description' => ''
+        ]);
+
+        $tag = Tag::create($formFields);
+
+        return redirect('/tags/' . $tag->id)->with('message', 'Tag created successfully');
+    }
 }
