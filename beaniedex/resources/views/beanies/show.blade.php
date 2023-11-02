@@ -26,11 +26,7 @@
         <div class="beanie-tags width-100">
             <h3>Tags</h3>
             <a href="/beanies/{{$beanie->id}}/tags/manage"><button>Manage Tags</button></a>
-            <div class="tag-container">
-                @foreach ($beanie->tags as $tag)
-                    <div class="tag">{{ $tag->name }}</div>
-                @endforeach
-            </div>            
+            <x-tag-container :tags="$beanie->tags" />           
         </div>
         
         <div class="beanie-poem width-100">

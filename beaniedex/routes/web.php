@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeanieController;
 use App\Http\Controllers\ProductLineController;
 use App\Http\Controllers\BeanieVariantController;
+use App\Http\Controllers\TagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,13 +42,21 @@ Route::put('/beanies/{beanie}', [BeanieController::class, 'update']);
 Route::delete('/beanies/{beanie}', [BeanieController::class, 'destroy']);
 
 
-// Tags routes
+// Beanie Tag routes
 
 Route::get('/beanies/{beanie}/tags/manage', [BeanieController::class, 'manageTags']);
 
 Route::delete('/beanies/{beanie}/tags/{tag}', [BeanieController::class, 'removeTag']);
 
 Route::post('/beanies/{beanie}/tags', [BeanieController::class, 'addTag']);
+
+
+// Tag routes
+
+Route::get('/tags', [TagController::class, 'index']);
+
+Route::get('/tags/{tag}', [TagController::class, 'show']);
+
 
 // Product Lines routes
 

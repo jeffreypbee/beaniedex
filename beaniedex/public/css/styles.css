@@ -246,7 +246,7 @@ button:hover {
     background: linear-gradient(to right, white, transparent);
 }
 
-.show-beanie .tag-container {
+.tag-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -255,7 +255,7 @@ button:hover {
     justify-content: center;
 }
 
-.show-beanie .tag {
+.tag {
     padding: 10px;
     background-color: var(--purple);
     color: white;

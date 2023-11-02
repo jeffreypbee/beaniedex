@@ -12,6 +12,7 @@
             <nav>
                 <a href="/beanies">Beanies</a>
                 <a href="/productlines">Product Lines</a>
+                <a href="/tags">Tags</a>
             </nav>
         </header>
 
