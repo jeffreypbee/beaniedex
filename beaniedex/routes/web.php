@@ -41,6 +41,14 @@ Route::put('/beanies/{beanie}', [BeanieController::class, 'update']);
 Route::delete('/beanies/{beanie}', [BeanieController::class, 'destroy']);
 
 
+// Tags routes
+
+Route::get('/beanies/{beanie}/tags/manage', [BeanieController::class, 'manageTags']);
+
+Route::delete('/beanies/{beanie}/tags/{tag}', [BeanieController::class, 'removeTag']);
+
+Route::post('/beanies/{beanie}/tags', [BeanieController::class, 'addTag']);
+
 // Product Lines routes
 
 Route::get('/productlines', [ProductLineController::class, 'index']);

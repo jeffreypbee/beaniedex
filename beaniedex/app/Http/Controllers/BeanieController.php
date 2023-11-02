@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\Beanie;
 use App\Models\ProductLine;
 use Illuminate\Http\Request;
@@ -84,8 +85,31 @@ class BeanieController extends Controller
 
     // Destroy Beanie
     public function destroy(Beanie $beanie) {
+        $beanie->tags()->detach();
         $beanie->delete();
 
-        return redirect('/beanies')->with('messae', 'Beanie deleted successfully');
+        return redirect('/beanies')->with('message', 'Beanie deleted successfully');
+    }
+
+    // Manage Tags
+    public function manageTags(Beanie $beanie) {
+        return view('tags.manage', [
+            'beanie' => $beanie,
+            'tags' => Tag::all()
+        ]);
+    }
+
+    // Remove Tag
+    public function removeTag(Beanie $beanie, Tag $tag) {
+        $beanie->tags()->detach($tag->id);
+
+        return redirect('/beanies/' . $beanie->id)->with('message', 'Tag successfully removed');
+    }
+
+    // Add Tag
+    public function addTag(Request $request, Beanie $beanie) {
+        $beanie->tags()->attach($request['tag']);
+
+        return redirect('/beanies/' . $beanie->id)->with('message', 'Tag successfully added');
     }
 }
