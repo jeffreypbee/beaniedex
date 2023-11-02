@@ -56,4 +56,12 @@ class TagController extends Controller
 
         return redirect('/tags/' . $tag->id)->with('message', 'Tag updated successfully');
     }
+
+    // Destroy Tag
+    public function destroy(Tag $tag) {
+        $tag->beanies()->detach();
+        $tag->delete();
+
+        return redirect('/tags')->with('message', 'Tag deleted successfully');
+    }
 }

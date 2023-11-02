@@ -4,7 +4,7 @@
 
 <section>
     <a href="/tags/{{$tag->id}}/edit"><button>Edit</button></a>
-    <form action="POST" action="/tags/{{$tag->id}}">
+    <form method="POST" action="/tags/{{$tag->id}}">
         @csrf
         @method('DELETE')
         <button>Delete</button>

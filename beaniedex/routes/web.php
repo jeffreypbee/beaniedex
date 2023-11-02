@@ -65,6 +65,8 @@ Route::get('/tags/{tag}/edit', [TagController::class, 'edit']);
 
 Route::put('/tags/{tag}', [TagController::class, 'update']);
 
+Route::delete('/tags/{tag}', [TagController::class, 'destroy']);
+
 
 // Product Lines routes
 
