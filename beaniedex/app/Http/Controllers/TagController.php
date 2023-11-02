@@ -37,4 +37,23 @@ class TagController extends Controller
 
         return redirect('/tags/' . $tag->id)->with('message', 'Tag created successfully');
     }
+
+    // Show edit form
+    public function edit(Tag $tag) {
+        return view('tags.edit', [
+            'tag' => $tag
+        ]);
+    }
+
+    // Update Tag data
+    public function update(Request $request, Tag $tag) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'description' => ''
+        ]);
+
+        $tag->update($formFields);
+
+        return redirect('/tags/' . $tag->id)->with('message', 'Tag updated successfully');
+    }
 }

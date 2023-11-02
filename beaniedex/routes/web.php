@@ -61,6 +61,10 @@ Route::get('/tags/{tag}', [TagController::class, 'show']);
 
 Route::post('/tags', [TagController::class, 'store']);
 
+Route::get('/tags/{tag}/edit', [TagController::class, 'edit']);
+
+Route::put('/tags/{tag}', [TagController::class, 'update']);
+
 
 // Product Lines routes
 
