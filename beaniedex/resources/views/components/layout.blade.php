@@ -43,6 +43,9 @@ div#user-bar {
     padding-block: 10px;
     display: flex;
     justify-content: right;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
 }
 
 #user-bar a {

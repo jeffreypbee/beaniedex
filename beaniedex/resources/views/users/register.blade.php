@@ -31,7 +31,7 @@
 
     <div>
         <label for="password_confirmation">Confirm Password</label>
-        <input type="passowrd" name="password_confirmation">
+        <input type="password" name="password_confirmation">
         @error('password_confirmation')
             {{$message}}
         @enderror
