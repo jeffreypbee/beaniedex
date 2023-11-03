@@ -137,58 +137,11 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
 }
 
-.beanie-card img {
-    height: 180px;
-    object-fit: contain;
-    border-radius: 20px;
-}
 
-.beanie-card {
-    transition: all .5s;
-    width: 150px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    box-shadow: 2px 5px 5px #3335;
-    border-radius: 20px;
-}
-
-.beanie-card:hover {
-    /* transform: rotate(-10deg); */
-    scale: 110%;
-}
-
-.beanie-card .productline {
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
-.beanie-card .info {
-    width: 100%;
-    color: white;
-    border-radius: 0 0 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--purple);
-    padding: 5px;
-    text-align: center;
-}
-
-.beanie-card .info div {
-    margin: 0px;
-}
-
-.beanie-card .name {
-    font-size: 1.2rem;
-    font-weight: bold;    
-}
 
 .create-form {
     min-width: 300px;
