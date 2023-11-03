@@ -21,7 +21,9 @@ use App\Http\Controllers\TagController;
 
 Route::get('/', function () {
     return view('welcome', [
-        'randomBeanie' => Beanie::inRandomOrder()->first()
+        'randomBeanies' => Beanie::inRandomOrder()->limit(5)->get(),
+        'latestBeanies' => Beanie::orderBy('created_at', 'desc')->limit(5)->get(),
+        'todaysBirthdays' => Beanie::where('birthday', 'like', '%' . date("m-d"))->get()
     ]);
 });
 
