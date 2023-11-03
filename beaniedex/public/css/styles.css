@@ -95,13 +95,6 @@ nav a:hover {
     scale: 110%;
 }
 
-div#user-bar {
-    grid-area: user;
-    padding: 10px;
-    display: flex;
-    justify-content: right;
-}
-
 a {
     text-decoration: none;
     color: var(--purple);

@@ -16,7 +16,15 @@
             </nav>
         </header>
 
-        <div id="user-bar">User</div>
+        <div id="user-bar">
+            @auth
+            {{auth()->user()->name}}
+            @else
+            <a href="/login">Login</a> |
+            <a href="/register">Register</a>
+            @endauth
+            
+        </div>
 
         <main>
             {{$slot}}
@@ -27,3 +35,19 @@
         </footer>
     </body>
 </html>
+
+<style>
+
+div#user-bar {
+    grid-area: user;
+    padding-block: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+#user-bar a {
+    color: white;
+    font-weight: bold;
+}
+
+</style>

@@ -3,10 +3,11 @@
 use App\Models\Beanie;
 use App\Models\BeanieVariant;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\BeanieController;
 use App\Http\Controllers\ProductLineController;
 use App\Http\Controllers\BeanieVariantController;
-use App\Http\Controllers\TagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ Route::get('/', function () {
         'todaysBirthdays' => Beanie::where('birthday', 'like', '%' . date("m-d"))->get()
     ]);
 });
+
+// User routes
+
+Route::get('/login', [UserController::class, 'login'])->middleware('guest');
 
 // Beanies routes
 
