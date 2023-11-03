@@ -36,6 +36,10 @@ Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 Route::post('/users', [UserController::class, 'store']);
 
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 // Beanies routes
 
 Route::get('/beanies', [BeanieController::class, 'index']);

@@ -18,7 +18,11 @@
 
         <div id="user-bar">
             @auth
-            {{auth()->user()->name}}
+            {{auth()->user()->name}} |&nbsp;
+            <form action="/logout" method="POST">
+            @csrf
+                <button>Logout</button>
+            </form>
             @else
             <a href="/login">Login</a> |
             <a href="/register">Register</a>
