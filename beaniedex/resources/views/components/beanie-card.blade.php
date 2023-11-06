@@ -1,16 +1,33 @@
 @props(['beanie'])
 
 <a href="/beanies/{{$beanie->id}}">
-    {{-- <div class="beanie-card"> --}}
-<div class="beanie-card" style="background: no-repeat center url('{{$beanie->image}}'); background-size: contain;">
+    <div class="beanie-card">
+        <img class="beanie-image" src="{{$beanie->image}}" alt="{{$beanie->name}}" title="{{$beanie->name}}" />
+        <div class="beanie-info">
+            <div class="beanie-name">{{$beanie->name}}</div>
+            <div class="beanie-number">{{$beanie->number}}</div>
+            <div class="beanie-version">{{$beanie->version}}</div>
+        </div>
+        <div class="beanie-productline"
+            style="background: linear-gradient(to right, transparent 5%, {{$beanie->productLine->color}});">
+            {{$beanie->productLine->name}}
+        </div>
+    </div>
+</a>
+
+
+{{-- <a href="/beanies/{{$beanie->id}}">
+
+    <div class="beanie-card">
+    <div class="beanie-card" style="background: no-repeat center url('{{$beanie->image}}'); background-size: contain;">
     <div class="productline"
         style="background: {{$beanie->productLine->color}};">
         {{ $beanie->productLine->name }}
     </div>
 
-    {{-- <img src="{{$beanie->image}}" 
+    <img src="{{$beanie->image}}" 
         alt="{{$beanie->name}}" 
-        title="{{$beanie->name}}" /> --}}
+        title="{{$beanie->name}}" />
 
     <div class="info">
         
@@ -19,64 +36,54 @@
         
     </div>
     
-</div>
-</a>
+    </div>
+</a> --}}
 
 <style>
-.beanie-card img {
-    height: 180px;
-    object-fit: contain;
-}
-
 .beanie-card {
-    transition: all .5s;
-    width: 150px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    box-shadow: 2px 5px 5px #3335;
     position: relative;
+    height: 150px;
+    width: 250px;
+    display: flex;
+    background: linear-gradient(var(--purple), white);
+    transition: all .5s;
 }
 
 .beanie-card:hover {
-    /* transform: rotate(-10deg); */
     scale: 110%;
+    box-shadow: 5px 5px 10px gray;
+    z-index: 5;
 }
 
-.beanie-card .productline {
-    width: 100%;
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 0;
+.beanie-card .beanie-image {    
+    border-radius: 0 20px 20px 0;
 }
 
-.beanie-card .info {
+.beanie-card .beanie-info {
     width: 100%;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--purple);
     text-align: center;
-    position: relative;
 }
 
-.beanie-card .info div {
-    margin: 0px;
-}
-
-.beanie-card .name {
-    font-size: 1.2rem;
+.beanie-card .beanie-name {
     font-weight: bold;
-    padding: 5px;  
+    text-align: center;
+    font-size: 1.1rem;
+    border-bottom: 1px solid white;
 }
 
-.beanie-card .version {
-    width: 100%;
+.beanie-card .beanie-number {
+    text-align: center;
+    font-size: .8rem;
+}
+
+.beanie-card .beanie-productline {
+    text-align: right;
     position: absolute;
-    top: -15px;
-    background: var(--pink);
+    right: 0;
+    bottom: 0;;
+    width: 150px;
+    color: white;
+    padding-inline: 5px;
 }
 </style>
