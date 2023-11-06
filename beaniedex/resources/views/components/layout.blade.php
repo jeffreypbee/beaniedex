@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js"></script>
         <title>BeanieDex</title>
     </head>
     <body>
@@ -31,6 +32,7 @@
         </div>
 
         <main>
+            <x-messages />
             {{$slot}}
         </main>
 
