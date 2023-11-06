@@ -14,7 +14,7 @@
     </div> 
     
     <div>
-        <label for="number">Prodcut Number</label>
+        <label for="number">Product Number</label>
         <input type="text" name="number" value="{{old('number')}}">
         @error('number')
             {{ $message }}
