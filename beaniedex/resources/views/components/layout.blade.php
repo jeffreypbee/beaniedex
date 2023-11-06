@@ -19,13 +19,9 @@
 
         <div id="user-bar">
             @auth
-            {{auth()->user()->name}} |&nbsp;
-            <form action="/logout" method="POST">
-            @csrf
-                <button>Logout</button>
-            </form>
+            <x-user-menu />
             @else
-            <a href="/login">Login</a> |
+            <a href="/login">Login</a>&nbsp;|&nbsp;
             <a href="/register">Register</a>
             @endauth
             
@@ -37,7 +33,11 @@
         </main>
 
         <footer>
-            Copyright &copy; 2023 Jeffrey Bee
+            Copyright &copy; 
+            @php
+                echo date('Y');
+            @endphp 
+            Jeffrey Bee
         </footer>
     </body>
 </html>
