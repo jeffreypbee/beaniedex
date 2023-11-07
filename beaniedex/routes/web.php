@@ -93,3 +93,6 @@ Route::get('/productlines/{productLine}', [ProductLineController::class, 'show']
 
 Route::post('/productlines', [ProductLineController::class, 'store']);
 
+Route::get('/productlines/{productLine}/edit', [ProductLineController::class, 'edit']);
+
+Route::put('/productlines/{productLine}', [ProductLineController::class, 'update']);

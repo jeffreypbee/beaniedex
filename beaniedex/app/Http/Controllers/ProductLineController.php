@@ -41,4 +41,26 @@ class ProductLineController extends Controller
 
         return redirect('/productlines')->with('message', 'Product Line created successfully!');
     }
+
+    // Show Edit form
+    public function edit(ProductLine $productLine) {
+        return view('productlines.edit', [
+            'productLine' => $productLine
+        ]);
+    }
+
+    // Update Product Line data
+    public function update(Request $request, ProductLine $productLine) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'plural' => 'required',
+            'color' => 'required',
+            'image' => '',
+            'description' => ''
+        ]);
+
+        $productLine->update($formFields);
+
+        return redirect('/productlines/' . $productLine->id)->with('message', 'Product line updated successfully');
+    }
 }
