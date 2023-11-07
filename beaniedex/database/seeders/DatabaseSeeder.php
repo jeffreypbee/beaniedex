@@ -29,5 +29,10 @@ class DatabaseSeeder extends Seeder
         $beanieSeeder = new BeanieSeeder();
         $beanieSeeder->run();
 
+        $roleSeeder = new RoleSeeder();
+        $roleSeeder->run();
+
+        $userSeeder = new UserSeeder();
+        $userSeeder->run();
     }
 }
