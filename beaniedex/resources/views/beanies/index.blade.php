@@ -10,7 +10,9 @@
 
 </form>
 
-<a href="/beanies/create"><button>Add New Beanie</button></a>
+<x-auth-admin>
+    <a href="/beanies/create"><button>Add New Beanie</button></a>
+</x-auth-admin>
 
 <x-beanie-card-container :beanies="$beanies" />
 

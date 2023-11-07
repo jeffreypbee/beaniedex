@@ -2,7 +2,10 @@
 
 <h2>Product Lines</h2>
 
-<a href="/productlines/create"><button>Add New Product Line</button></a>
+<x-auth-admin>
+    <a href="/productlines/create"><button>Add New Product Line</button></a>
+</x-auth-admin>
+
 
 <div class="product-line-card-container">
 @foreach ($productLines as $productLine)

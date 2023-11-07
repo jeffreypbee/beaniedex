@@ -25,7 +25,10 @@
         
         <div class="beanie-tags width-100">
             <h3>Tags</h3>
-            <a href="/beanies/{{$beanie->id}}/tags/manage"><button>Manage Tags</button></a>
+            <x-auth-admin>
+                <a href="/beanies/{{$beanie->id}}/tags/manage"><button>Manage Tags</button></a>
+            </x-auth-admin>
+            
             <x-tag-container :tags="$beanie->tags" />           
         </div>
         
@@ -46,14 +49,16 @@
             <x-beanie-card-container :beanies="$versions" />
         </div>
         
-        <div class="buttons">
-            <a href="/beanies/{{$beanie->id}}/edit"><button>Edit</button></a>
-            <form method="POST" action="/beanies/{{$beanie->id}}">
-                @csrf
-                @method('DELETE')
-                <button>Delete</button>
-            </form>
-        </div>
+        <x-auth-admin>
+            <div class="buttons">
+                <a href="/beanies/{{$beanie->id}}/edit"><button>Edit</button></a>
+                <form method="POST" action="/beanies/{{$beanie->id}}">
+                    @csrf
+                    @method('DELETE')
+                    <button>Delete</button>
+                </form>
+            </div>
+        </x-auth-admin>
         
     </div>    
 </div>
