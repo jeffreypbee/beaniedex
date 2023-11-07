@@ -16,3 +16,13 @@
 
 
 </x-layout>
+
+<style>
+.product-line-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+</style>

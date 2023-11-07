@@ -275,38 +275,6 @@ button:hover {
     text-align: center;
 }
 
-.show-product-line .product-line-image {
-    max-width: 80%;
-}
-
-.product-line-card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 80%;
-}
-
-.product-line-card {
-    width: 100%;
-    border-radius: 20px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.product-line-card .name {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 0 var(--purple);
-    width: 100%;
-    padding: 10px;
-}
-
 button.pill {
     border-radius: 20px;
     color: white;
