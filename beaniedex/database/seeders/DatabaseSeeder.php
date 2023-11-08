@@ -40,5 +40,8 @@ class DatabaseSeeder extends Seeder
 
         $userSeeder = new UserSeeder();
         $userSeeder->run();
+
+        $collectedBeanieSeeder = new CollectedBeanieSeeder();
+        $collectedBeanieSeeder->run();
     }
 }
