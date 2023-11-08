@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\SwingTag;
-use Illuminate\Database\Seeder;
+use App\Models\TushTag;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
-class SwingTagSeeder extends Seeder
+class TushTagSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,9 @@ class SwingTagSeeder extends Seeder
     public function run(): void
     {
         for($i = 1; $i < 10; $i++) {
-            SwingTag::factory()->create([
+            TushTag::factory()->create([
                 'generation' => $i
             ]);
         }
-        
     }
 }

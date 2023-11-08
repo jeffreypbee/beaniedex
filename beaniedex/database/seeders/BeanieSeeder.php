@@ -64,6 +64,7 @@ class BeanieSeeder extends Seeder
                         You'll see the magic in her blue eyes!"
         ]);
         $beanie->swingTags()->attach([4, 5]);
+        $beanie->tushTags()->attach([5, 6]);
 
         $beanie = Beanie::factory()->create([
             'name' => 'Sly',
