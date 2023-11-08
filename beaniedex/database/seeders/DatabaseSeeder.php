@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
        
         $tagSeeder = new TagSeeder();
         $tagSeeder->run();
+
+        $swingTagSeeder = new SwingTagSeeder();
+        $swingTagSeeder->run();
          
         $beanieSeeder = new BeanieSeeder();
         $beanieSeeder->run();

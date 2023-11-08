@@ -63,6 +63,7 @@ class BeanieSeeder extends Seeder
                         Keep Mystic with you, she's a prize\n
                         You'll see the magic in her blue eyes!"
         ]);
+        $beanie->swingTags()->attach([4, 5]);
 
         $beanie = Beanie::factory()->create([
             'name' => 'Sly',

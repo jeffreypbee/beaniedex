@@ -36,6 +36,11 @@ class Beanie extends Model
         return $this->belongsToMany(Tag::class);
     }
 
+    public function swingTags(): BelongsToMany
+    {
+        return $this->belongsToMany(SwingTag::class);
+    }
+
     public function scopeFilter($query, array $filters) {
         if ($filters['search'] ?? false) {
             $searchTerm = '%' . request('search') . '%';
