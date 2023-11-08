@@ -27,6 +27,11 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
+}
+
+.show-product-line h2 {
+    width: 100%;
 }
 
 .product-line-image {
