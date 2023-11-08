@@ -20,6 +20,16 @@
                 <p>Birthday: {{ $beanie->birthday }}</p>
                 <p>Released: {{ $beanie->releaseDate }}</p>
                 <p>Retired: {{ $beanie->retiredDate }}</p>
+                <p>Swing Tag Generations:
+                    @foreach ($beanie->swingTags as $swingTag)
+                        {{$swingTag->generation}}&nbsp;
+                    @endforeach
+                </p>
+                <p>Tush Tag Generations:
+                    @foreach ($beanie->tushTags as $tushTag)
+                        {{$tushTag->generation}}&nbsp;
+                    @endforeach
+                </p>
             </div>
         </div>    
         
