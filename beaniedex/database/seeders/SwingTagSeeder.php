@@ -15,7 +15,8 @@ class SwingTagSeeder extends Seeder
     {
         for($i = 1; $i < 10; $i++) {
             SwingTag::factory()->create([
-                'generation' => $i
+                'generation' => $i,
+                'product_line_id' => 1
             ]);
         }
         

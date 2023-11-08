@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('start_year')->nullable();
             $table->integer('end_year')->nullable();
             $table->longText('description')->nullable();
+            $table->foreignId('product_line_id')->constrained('product_lines')->onDelete('cascade');
             $table->timestamps();
         });
     }
