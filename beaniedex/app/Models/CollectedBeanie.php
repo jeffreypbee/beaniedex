@@ -13,4 +13,8 @@ class CollectedBeanie extends Model
     public function user(): BelongsTo {
         return $this->belongsTo(User::class);
     }
+
+    public function beanie(): BelongsTo {
+        return $this->belongsTo(Beanie::class);
+    }
 }

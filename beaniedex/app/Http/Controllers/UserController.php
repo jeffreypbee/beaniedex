@@ -61,4 +61,15 @@ class UserController extends Controller
 
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
     }
+
+    // Display collection
+    public function collection(User $user) {
+        // $collection = [];
+        // foreach($user->collectedBeanies as $collectedBeanie) {
+        //     array_push($collection, $collectedBeanie->beanie);
+        // }
+        return view('users.collection', [
+            'collection' => $user->collectedBeanies
+        ]);
+    }
 }

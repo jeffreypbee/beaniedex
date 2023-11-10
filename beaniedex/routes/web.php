@@ -40,6 +40,8 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
+Route::get('/users/{user}/collection', [UserController::class, 'collection']);
+
 // Beanies routes
 
 Route::get('/beanies', [BeanieController::class, 'index']);

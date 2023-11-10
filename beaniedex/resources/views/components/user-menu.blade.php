@@ -1,7 +1,8 @@
 <div x-data="{expand: false}" class="user-menu">
     <button @click="expand = !expand">{{auth()->user()->name}}</button>
     <div x-show="expand" class="expanded-menu">
-        <a href=""><button>Profile</button></a>
+        <a href="/users/{{auth()->user()->id}}"><button>Profile</button></a>
+        <a href="/users/{{auth()->user()->id}}/collection"><button>My Collection</button></a>
         <form action="/logout" method="POST">
             @csrf
             <button>Logout</button>
