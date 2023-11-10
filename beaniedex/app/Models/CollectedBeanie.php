@@ -10,6 +10,11 @@ class CollectedBeanie extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'beanie_id'
+    ];
+
     public function user(): BelongsTo {
         return $this->belongsTo(User::class);
     }

@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BeanieController;
 use App\Http\Controllers\ProductLineController;
 use App\Http\Controllers\BeanieVariantController;
+use App\Http\Controllers\CollectedBeanieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,8 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::get('/users/{user}/collection', [UserController::class, 'collection']);
+
+Route::post('/users/{user}/collection', [CollectedBeanieController::class, 'store']);
 
 // Beanies routes
 

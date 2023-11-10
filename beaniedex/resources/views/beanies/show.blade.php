@@ -74,7 +74,12 @@
         <div class="buttons">
             <button>Fav</button>
             <button>Wish</button>
-            <button>Add</button>
+            <form action="/users/{{auth()->user()->id}}/collection" method="POST">
+            @csrf
+                <input type="hidden" name="user_id" value="{{auth()->user()->id}}" />
+                <input type="hidden" name="beanie_id" value="{{$beanie->id}}" />
+                <button>Add</button>
+            </form>
         </div>
         
     </div>    
