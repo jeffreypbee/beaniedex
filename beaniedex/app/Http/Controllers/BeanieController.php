@@ -6,6 +6,8 @@ use App\Models\Tag;
 use App\Models\Beanie;
 use App\Models\ProductLine;
 use Illuminate\Http\Request;
+use App\Models\CollectedBeanie;
+use Illuminate\Support\Facades\Auth;
 
 class BeanieController extends Controller
 {
@@ -18,10 +20,19 @@ class BeanieController extends Controller
 
     // Show a single Beanie
     public function show(Beanie $beanie) {
-        return view('beanies.show', [
-            'beanie' => $beanie,
-            'versions' => Beanie::where('number', '!=', '')->where('number', $beanie->number)->get()
-        ]);
+        if (Auth::check()) {
+            return view('beanies.show', [
+                'beanie' => $beanie,
+                'versions' => Beanie::where('number', '!=', '')->where('number', $beanie->number)->get(),
+                'collected' => CollectedBeanie::where('beanie_id', '=', $beanie->id)->where('user_id', '=', auth()->user()->id)->first()
+            ]);
+        } else {
+            return view('beanies.show', [
+                'beanie' => $beanie,
+                'versions' => Beanie::where('number', '!=', '')->where('number', $beanie->number)->get()
+            ]);
+        }
+        
     }
 
     // Show creation form

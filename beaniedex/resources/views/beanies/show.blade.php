@@ -75,12 +75,21 @@
         <div class="buttons">
             <button>Fav</button>
             <button>Wish</button>
-            <form action="/users/{{auth()->user()->id}}/collection" method="POST">
-            @csrf
-                <input type="hidden" name="user_id" value="{{auth()->user()->id}}" />
-                <input type="hidden" name="beanie_id" value="{{$beanie->id}}" />
-                <button>Add</button>
-            </form>
+            @if ($collected === null)
+                <form action="/users/{{auth()->user()->id}}/collection" method="POST">
+                @csrf
+                    <input type="hidden" name="user_id" value="{{auth()->user()->id}}" />
+                    <input type="hidden" name="beanie_id" value="{{$beanie->id}}" />
+                    <button>+</button>
+                </form>
+            @else
+                <form action="/collectedbeanie/{{$collected->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                    <button>-</button>
+                </form>
+            @endif
+            
         </div>
         @endauth
         

@@ -19,4 +19,12 @@ class CollectedBeanieController extends Controller
         
         return redirect('/beanies/' . $collectedBeanie->beanie->id)->with('message', 'Beanie added to collection!');
     }
+
+    public function destroy(CollectedBeanie $collectedBeanie) {
+        $beanieId = $collectedBeanie->beanie_id;
+
+        $collectedBeanie->delete();
+
+        return redirect('/beanies/' . $beanieId)->with('message', 'Beanie removed from collection');
+    }
 }

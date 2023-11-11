@@ -41,9 +41,13 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
+// Collection routes
+
 Route::get('/users/{user}/collection', [UserController::class, 'collection']);
 
 Route::post('/users/{user}/collection', [CollectedBeanieController::class, 'store']);
+
+Route::delete('/collectedbeanie/{collectedBeanie}', [CollectedBeanieController::class, 'destroy']);
 
 // Beanies routes
 
