@@ -71,6 +71,7 @@
             <x-beanie-card-container :beanies="$versions" />
         </div>
         
+        @auth
         <div class="buttons">
             <button>Fav</button>
             <button>Wish</button>
@@ -81,6 +82,8 @@
                 <button>Add</button>
             </form>
         </div>
+        @endauth
+        
         
     </div>    
 </div>
