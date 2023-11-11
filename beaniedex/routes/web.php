@@ -45,9 +45,9 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::get('/users/{user}/collection', [UserController::class, 'collection']);
 
-Route::post('/users/{user}/collection', [CollectedBeanieController::class, 'store']);
+Route::post('/collectedbeanies', [CollectedBeanieController::class, 'store']);
 
-Route::delete('/collectedbeanie/{collectedBeanie}', [CollectedBeanieController::class, 'destroy']);
+Route::delete('/collectedbeanies/{collectedBeanie}', [CollectedBeanieController::class, 'destroy']);
 
 // Beanies routes
 
