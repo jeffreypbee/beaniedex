@@ -43,7 +43,7 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 // Collection routes
 
-Route::get('/users/{user}/collection', [UserController::class, 'collection']);
+Route::get('/collectedbeanies', [CollectedBeanieController::class, 'index']);
 
 Route::post('/collectedbeanies', [CollectedBeanieController::class, 'store']);
 
