@@ -1,6 +1,8 @@
 :root {
     --purple: rgb(131,58,180);
     --purple-lucent: rgba(131,58,180,.9);
+    --light-purple: rgb(224, 190, 226);
+    --lighter-purple: rgb(246, 234, 247);
     --pink: rgb(253,29,29);
     --pink-lucent: rgba(253,29,29,.5);
     --yellow: rgb(245,252,69);

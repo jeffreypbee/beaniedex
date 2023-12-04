@@ -5,8 +5,13 @@
         <img class="beanie-image" src="{{$beanie->image}}" alt="{{$beanie->name}}" title="{{$beanie->name}}" />
         <div class="beanie-info">
             <div class="beanie-name">{{$beanie->name}}</div>
-            <div class="beanie-number">{{$beanie->number}}</div>
-            <div class="beanie-version">{{$beanie->version}}</div>
+            @unless ($beanie->number === null)
+                <div class="beanie-number"># {{$beanie->number}}</div>
+            @endunless
+            @unless ($beanie->version === null)
+                <div class="beanie-version">{{$beanie->version}}</div>
+            @endunless
+            
         </div>
         <div class="beanie-productline"
             style="background: linear-gradient(to right, transparent 5%, {{$beanie->productLine->color}});">
@@ -45,7 +50,7 @@
     height: 150px;
     width: 250px;
     display: flex;
-    background: linear-gradient(var(--purple), white);
+    background: var(--lighter-purple);
     transition: all .5s;
 }
 
@@ -61,14 +66,13 @@
 
 .beanie-card .beanie-info {
     width: 100%;
-    color: white;
     text-align: center;
 }
 
 .beanie-card .beanie-name {
     font-weight: bold;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-bottom: 1px solid white;
 }
 
