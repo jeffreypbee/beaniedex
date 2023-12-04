@@ -2,7 +2,7 @@
 <div 
     class="show-beanie" 
     style="background: no-repeat center url('{{$beanie->image}}');
-        background-size: 250%;">
+        background-size: 200%;">
 
     <div class="blur-bg flex-column">
         <div class="beanie-name width-100">
@@ -54,12 +54,14 @@
             <x-tag-container :tags="$beanie->tags" />           
         </div>
         
+        @unless ($beanie->poem === null)
         <div class="beanie-poem width-100">
             <h3>Poem</h3>
             <p class="poem">
                 {!! nl2br(e($beanie->poem)); !!}
             </p>            
         </div>
+        @endunless
 
         <div class="beanie-notes width-100">
             <h3>Notes</h3>
@@ -117,7 +119,7 @@
 }
 
 .show-beanie .blur-bg, .show-product-line .blur-bg {
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .show-beanie h2 {
